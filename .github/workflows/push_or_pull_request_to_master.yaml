@@ -27,7 +27,7 @@ jobs:
           exclude: ".github/...;ci/..."
         env:
           # GitHub token for annotations (optional)
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build:
     name: Build
