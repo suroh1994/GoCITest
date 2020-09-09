@@ -25,9 +25,6 @@ jobs:
           config: ci/linterconfig.toml
           # Exclude patterns, separated by semicolons (optional)
           exclude: ".github/...;ci/..."
-        env:
-          # GitHub token for annotations (optional)
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
 
   build:
     name: Build
