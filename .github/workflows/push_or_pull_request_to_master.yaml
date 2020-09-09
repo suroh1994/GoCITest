@@ -1,4 +1,5 @@
-name: Build and Test
+name: Updates to Master
+
 on:
   push:
     branches:
@@ -18,10 +19,15 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v1
 
-      - name: Lint Go Code
-        run: |
-          go get -u golang.org/x/lint/golint 
-          make lint
+      - name: Run Revive Action by building from repository
+        uses: morphy2k/revive-action@v1
+        with:
+          config: ci/linterconfig.toml
+          # Exclude patterns, separated by semicolons (optional)
+          exclude: ".github/...;ci/..."
+        env:
+          # GitHub token for annotations (optional)
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
 
   build:
     name: Build
