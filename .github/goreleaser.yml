@@ -14,19 +14,20 @@ builds:
       - 386
       - amd64
 archives:
-  - replacements:
+  - 
+    replacements:
       darwin: MacOS
       linux: Linux
       windows: Windows
       amd64: x86_64
       386: x86
-  - format: gz
-  files:
-    - LICENSE
-    - README.md
-  - format_overrides:
-    - goos: 'windows'
-      format: 'zip'
+    format: gz
+    files:
+      - LICENSE
+      - README.md
+    format_overrides:
+      - goos: 'windows'
+        format: 'zip'
 release:
   prerelease: auto
 changelog:
