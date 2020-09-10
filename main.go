@@ -4,8 +4,10 @@ import (
 	"fmt"
 )
 
+var version = "0.0.0-src"
+
 func main() {
-	fmt.Println("hello world")
+	fmt.Printf("hello world, you are running version %s\n", version)
 }
 
 func funnyFunction() {
