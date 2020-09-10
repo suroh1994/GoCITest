@@ -1,12 +1,12 @@
 name: Updates to Master
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    types: [opened, edited, synchronize, reopened]
-  
+# TODO: reenable later on!
+# on:
+#   push:
+#     branches:
+#       - master
+#   pull_request:
+#     types: [opened, edited, synchronize, reopened]
   
 jobs:
   lint:
