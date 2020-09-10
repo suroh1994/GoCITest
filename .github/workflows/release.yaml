@@ -18,10 +18,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Required to generate the changelog correctly
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
+          version: latest
           args: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
