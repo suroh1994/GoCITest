@@ -10,6 +10,6 @@ func main() {
 	fmt.Printf("hello world, you are running version %s\n", version)
 }
 
-func funnyFunction() {
-	fmt.Println("Smile! :)")
+func funnyFunction() string {
+	return "Smile! :)"
 }
