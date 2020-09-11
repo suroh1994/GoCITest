@@ -1,8 +1,16 @@
 
+<a name="v0.0.11"></a>
+## [v0.0.11](https://github.com/suroh1994/GoCITest/compare/v0.0.10...v0.0.11) (2020-09-11)
+
+### 🆕 Features
+
+* **ci:** Replace goreleaser changelog
+
+
 <a name="v0.0.10"></a>
 ## [v0.0.10](https://github.com/suroh1994/GoCITest/compare/v0.0.9...v0.0.10) (2020-09-11)
 
-### Feat
+### 🆕 Features
 
 * **ci:** Add config for chglog
 
