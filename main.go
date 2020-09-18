@@ -34,3 +34,7 @@ func doSelfUpdate() {
 		log.Println("Release note:\n", latest.ReleaseNotes)
 	}
 }
+
+func Greet() {
+	fmt.Println("Hello user!")
+}

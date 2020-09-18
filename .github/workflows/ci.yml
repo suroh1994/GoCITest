@@ -10,7 +10,7 @@ jobs:
     name: Test
     strategy:
       matrix:
-        go-version: [1.14.x, 1.15.x]
+        go-version: [1.15.x]
         platform: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
     steps:
@@ -25,13 +25,27 @@ jobs:
       - name: Test
         run: go test -v ./...
   # ================
+  # LINT JOB
+  #   runs on every push and PR
+  # ================
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v2
+        with:
+          # Required: the version of golangci-lint is required and must be specified without patch version: we always use the latest patch version.
+          version: v1.29
+  # ================
   # RELEASE JOB
   #   runs after a success test
   #   only runs on push "v*" tag
   # ================
   release:
     name: Release
-    needs: test
+    needs: [test, lint]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
