@@ -35,6 +35,7 @@ func doSelfUpdate() {
 	}
 }
 
+// Greet prints the current version to screen
 func Greet() {
 	fmt.Printf("hello user, you are running version %s\n", version)
 
