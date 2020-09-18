@@ -11,7 +11,7 @@ import (
 var version = "0.0.0"
 
 func main() {
-	fmt.Printf("hello world, you are running version %s\n", version)
+	Greet()
 	doSelfUpdate()
 }
 
@@ -36,5 +36,5 @@ func doSelfUpdate() {
 }
 
 func Greet() {
-	fmt.Println("Hello user!")
+	fmt.Printf("hello user, you are running version %s\n", version)
 }
