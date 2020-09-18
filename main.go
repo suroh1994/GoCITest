@@ -37,4 +37,9 @@ func doSelfUpdate() {
 
 func Greet() {
 	fmt.Printf("hello user, you are running version %s\n", version)
+
+	if true {
+		return
+	}
+	fmt.Println("never printed")
 }
